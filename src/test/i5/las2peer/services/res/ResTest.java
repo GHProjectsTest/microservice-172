@@ -102,7 +102,7 @@ public class ResTest {
     try {
       String pathparam_name = "initialized";
       c.setLogin(testAgent.getIdentifier(), testPass);
-      ClientResponse result = c.sendRequest("GET", mainPath + "/mpath", "",
+      ClientResponse result = c.sendRequest("GET", mainPath + "/mpath/{pathparam_name}", "",
         MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, new HashMap<String,String>());
       assertTrue(true); // change here
       System.out.println("Result of 'testmname': " + result.getResponse().trim());
